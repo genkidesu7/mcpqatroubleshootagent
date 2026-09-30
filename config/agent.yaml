@@ -1,0 +1,18 @@
+# AgentRegistry discovery manifest. All keys are intentionally at root level.
+id: "CMN-C1-069"
+name: "McpQaTroubleshootAgent"
+namespace: "agent1000"
+version: "1.0.0"
+enabled: true
+category: "Cat 1"
+generation_mode: "llm"
+industry: "CMN"
+base_type: "AgentBaseGraph"
+class: "src.graph.graph.Graph"
+required_trust_level: "VERIFIED_EXTERNAL"
+requires:
+  secrets:
+    - AZURE_OPENAI_API_KEY
+    - AZURE_OPENAI_ENDPOINT
+    - AZURE_OPENAI_DEPLOYMENT
+  extras: ["openai"]
